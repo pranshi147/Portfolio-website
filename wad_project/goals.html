@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY Future Goals</title>
+        <style>
+             body{
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+     h1:hover {
+            color: #ff78e3;
+        }
+
+        .goals {
+            display: flex;
+            align-items: center;  
+            gap: 120px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        /* Image with transition */
+      .goals img {
+    width: 250px;          
+    height: auto;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.show-image {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+        </style>
+    </head>
+    <body>
+        <h1>My Future Goals</h1>
+        <div class="goals">
+            <img id="goal" src="images/window.jpeg">
+            <p> Imma be real—one day, I wanna be so rich that I can wake up to a beautiful city view right from my bedroom. It might sound crazy, but that’s the level I’m aiming for. I want to build a solid future in coding, keep leveling up my skills, and maybe even work on something big enough to call my own. And honestly, if everything falls into place, starting my own company one day would be really appreciated. In the future, I want to become as successful as I possibly can, both personally and professionally. I don’t have everything figured out yet, but I know I want to keep growing, learning, and improving myself step by step. Whether it’s building stronger skills, taking on new opportunities, or becoming a better version of myself, I want to create a life I’m proud of. My focus is to stay consistent, stay motivated, and work hard toward the success I dream of.</p>
+        </div>
+    </body>
+    <script>window.addEventListener("load", function() {
+    const img = document.getElementById("goal");
+
+    setTimeout(() => {
+        img.classList.add("show-image");
+    }, 300); 
+});</script>
+</html>

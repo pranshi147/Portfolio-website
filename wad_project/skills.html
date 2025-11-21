@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Skills</title>
+  <style>
+    body{
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .code{
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+
+    
+    .code img {
+      width: 30vw;
+      height: 500px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 900ms ease, transform 900ms ease;
+      position: relative;
+      margin-top: 100px;
+
+    }
+
+    .code img.show-image {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .code ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 900ms ease, transform 900ms ease;
+    }
+
+    .code ul.show-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .soft{
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+
+    
+    .soft img {
+      width: 30vw;
+      height: 500px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 900ms ease, transform 900ms ease;
+      position: relative;
+      margin-top: 100px;
+
+    }
+
+    .soft img.show-image {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .soft ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 900ms ease, transform 900ms ease;
+    }
+
+    .soft ul.show-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1:hover {
+            color: #ff78e3;
+        }
+
+  </style>
+</head>
+<body>
+  <h1>My Skill Set</h1>
+
+  <div class="code">
+    <img id="code-img" src="images/code.jpeg" alt="coding image">
+    <ul id="skill-list">
+        <li><h1>Coding Languages:</h1></li>
+      <li><h2>C and C++</h2></li>
+      <li><h2>HTML and CSS</h2></li>
+      <li><h2>Javascript</h2></li>
+    </ul>
+  </div>
+
+  <div class="soft">
+    <img id="soft" src="images/soft.jpeg" alt="soft skills image">
+    <ul id="points">
+        <li><h1>Soft Skills:</h1></li>
+        <li><h2>Communication</h2></li>
+        <li><h2>Event Management</h2></li>
+        <li><h2>Leadership Skills</h2></li>
+    </ul>
+  </div>
+
+  <script>
+
+(function() {
+  const img = document.getElementById('code-img');
+  const list = document.getElementById('skill-list');
+
+  function show() {
+    img.classList.add('show-image');
+    list.classList.add('show-text');
+  }
+
+  window.addEventListener('load', () => {
+    if (img.complete) {
+      setTimeout(show, 120);
+    } else {
+      img.addEventListener('load', () => setTimeout(show, 120));
+      img.addEventListener('error', () => list.classList.add('show-text'));
+    }
+  });
+})();
+
+
+(function() {
+  const img = document.getElementById('soft');   
+  const list = document.getElementById('points');
+
+  function show() {
+    img.classList.add('show-image');
+    list.classList.add('show-text');
+  }
+
+  window.addEventListener('load', () => {
+    if (img.complete) {
+      setTimeout(show, 120);
+    } else {
+      img.addEventListener('load', () => setTimeout(show, 120));
+      img.addEventListener('error', () => list.classList.add('show-text'));
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
