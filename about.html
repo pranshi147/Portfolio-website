@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+
+    <style>
+            body{
+              background: url("images/bg.jpeg") no-repeat center center fixed;
+              background-size: cover;
+              color: white;
+              text-align: center;
+              font-family: Arial, sans-serif;
+            }
+
+        .container {
+            display: flex;
+            align-items: center;  
+            gap: 120px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+      .container img {
+    width: 250px;          
+    height: auto;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.show-image {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+        h1 {
+            color: white;
+            margin-top: 20;
+            font-size: 50px;
+            transform: translateY(-10px);
+            transition: color 0.4s ease;
+        }
+
+        h1:hover {
+            color: #ff78e3;
+        }
+
+        .text {
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .text {
+            color: white;
+            transform: translateY(-40px);
+            line-height: 1.5;
+            font-size: 18px;
+            opacity: 0.9;
+            transition: opacity 0.5s ease;
+        }
+
+        .text p:hover {
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img id="profilePic" src="images/me.jpg" alt="Me">
+        
+        <div class="text">
+            <h1>Pranshi Mittal</h1>
+
+            <p>
+                Hello, I’m Pranshi Mittal — a 17 year old learner, creator, and someone who believes in turning ideas into stories. 
+                I explore design, technology, and digital expression, always looking for new ways to combine creativity 
+                with purpose. My work reflects who I am: thoughtful, experimental, and always evolving. Every project 
+                I create teaches me something new, and I hope to continue growing, exploring, and sharing what I learn 
+                along the way.
+                <ul>
+                    <li>Education:
+                        <ul>
+                            <li>Indira Gandhi Delhi Technical University For Women<br>
+                            Bachelor of Technology- Btech, Computer Science and Engineering<br>
+                        2025-2029</li>
+                        <li> Bal Bharati Public School Rohini<br>
+                        High School Diploma</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            </div>
+            </div>
+</body>
+  <script src="web.js"></script>
+</html>
